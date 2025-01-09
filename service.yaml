@@ -1,0 +1,28 @@
+name: servo-trimmer
+author: leonid
+source: github.com/VU-ASE/servo-trimmer
+version: 0.0.1
+description: A template service in Go
+
+commands:
+  build: make build
+  run: ./bin/servo-trimmer
+
+inputs:
+  - service: example-input
+    streams:
+      - rpm-data
+outputs:
+  - example-output
+
+configuration:
+  - name: number-example
+    type: number
+    value: 30
+  - name: string-example
+    type: string
+    value: "hello all"
+  - name: tunable-string-example
+    type: string
+    value: "hello all, this is tunable"
+    tunable: true
